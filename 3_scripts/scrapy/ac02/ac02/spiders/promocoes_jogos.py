@@ -4,11 +4,11 @@ class PromocoesJogosSpider(scrapy.Spider):
     name = "promocoes-jogos"
     allowed_domains = ["nuuvem.com"]
 
-    start_urls = ["http://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc", \
-                  "https://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc/page/2", \
-                    "https://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc/page/3", \
-                    "https://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc/page/4", \
-                    "https://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc/page/5"]
+    start_urls = []
+    url_base = "https://www.nuuvem.com/br-pt/catalog/platforms/pc/sort/bestselling/sort-mode/desc"
+    num_pages = 5
+    for i in range(1,num_pages+1,1):
+        start_urls.append(f"{url_base}/page/{i}")
 
     def parse(self, response):
         for jogo in response.css(".product-card--grid"): 
