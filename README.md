@@ -1,4 +1,9 @@
 # AC030-WebMining-TuLaLu
+## Integrantes do trabalho
+- Arthur Vinicius Santos Silva  RA:1903665
+- Larissa Ionafa                RA:1903166
+- Lucas da Silva Santos         RA:1904201
+
 Abaixo comandos utilizados para a execução da AC02.
 
 Habilitar o modo Shell do Scrapy para testes:
