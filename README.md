@@ -6,6 +6,12 @@
 
 Abaixo comandos utilizados para a execução da AC02.
 
+Instalar pré requisitos para rodar o projeto
+```shell
+pip install -r requirements.txt
+```
+
+
 Habilitar o modo Shell do Scrapy para testes:
 
 ```shell
@@ -31,3 +37,4 @@ comando para executar spider e salvar o retorno:
 scrapy crawl <<nome-spider>> -O nome-do-arquivo.tipo-arquivo(csv,json,etc...)
 scrapy crawl promocoes-jogos -O ../../../0_bases_originais/original.csv
 ```
+
